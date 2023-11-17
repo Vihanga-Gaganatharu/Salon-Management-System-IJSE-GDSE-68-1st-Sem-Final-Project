@@ -11,7 +11,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.Controller.DashboardFormController">
    <children>
-      <Pane prefHeight="938.0" prefWidth="1693.0">
+      <Pane prefHeight="938.0" prefWidth="1628.0">
          <children>
             <Pane id="DASHBOARD  HEAD" layoutX="1078.0" layoutY="50.0" prefHeight="121.0" prefWidth="244.0" style="-fx-background-color: FFF4DE;">
                <children>
@@ -116,12 +116,12 @@
                </font>
             </Label>
             <Pane prefHeight="200.0" prefWidth="200.0" />
-            <TableView layoutX="1094.0" layoutY="362.0" prefHeight="546.0" prefWidth="513.0">
+            <TableView layoutX="1094.0" layoutY="310.0" prefHeight="598.0" prefWidth="485.0">
               <columns>
                 <TableColumn prefWidth="89.666748046875" text="Appoinemnt  Id" />
                 <TableColumn minWidth="9.6666259765625" prefWidth="105.3333740234375" text="Date" />
                   <TableColumn prefWidth="120.0" text="Time" />
-                  <TableColumn prefWidth="131.0" text="Service" />
+                  <TableColumn prefWidth="167.0" text="Service" />
               </columns>
             </TableView>
          </children>

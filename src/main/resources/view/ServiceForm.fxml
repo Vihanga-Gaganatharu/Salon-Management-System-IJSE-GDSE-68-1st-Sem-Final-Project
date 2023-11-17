@@ -10,10 +10,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.Controller.ServiceFormController">
    <children>
-      <Pane prefHeight="938.0" prefWidth="1693.0" stylesheets="@../style/style.css">
+      <Pane prefHeight="938.0" prefWidth="1603.0" stylesheets="@../style/style.css">
          <children>
             <Label layoutX="319.0" layoutY="16.0" styleClass="fontdash" text=" Salon Mona" textFill="#ff00a5">
                <font>
@@ -65,18 +64,18 @@
                   <Font size="43.0" />
                </font>
             </Label>
-            <Button layoutX="1452.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnManageServicesonAction" prefHeight="60.0" prefWidth="189.0" styleClass="btn" text="Manage All" textFill="RED">
+            <Button layoutX="1182.0" layoutY="60.0" mnemonicParsing="false" onAction="#btnManageServicesonAction" prefHeight="60.0" prefWidth="189.0" styleClass="btn" text="Manage All" textFill="RED">
                <font>
                   <Font size="27.0" />
                </font>
             </Button>
-            <TableView layoutX="44.0" layoutY="459.0" prefHeight="458.0" prefWidth="1612.0">
+            <TableView layoutX="44.0" layoutY="459.0" prefHeight="458.0" prefWidth="1512.0">
               <columns>
                 <TableColumn prefWidth="201.66666412353516" text="Service Id" />
                 <TableColumn prefWidth="297.0" text="Service Name" />
                   <TableColumn prefWidth="297.0" text="Price" />
                   <TableColumn prefWidth="297.0" text="Type" />
-                  <TableColumn prefWidth="518.0" text="Description" />
+                  <TableColumn prefWidth="408.0" text="Description" />
               </columns>
             </TableView>
          </children>
