@@ -104,7 +104,7 @@
             </Label>
          </children>
       </Pane>
-      <Button alignment="CENTER_RIGHT" layoutX="1286.0" layoutY="44.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="360.0" text="         Manage Customers" textFill="#00ff57">
+      <Button alignment="CENTER_RIGHT" layoutX="1286.0" layoutY="44.0" mnemonicParsing="false" onAction="#btnManageCustOnAction" prefHeight="71.0" prefWidth="360.0" text="         Manage Customers" textFill="#00ff57">
          <font>
             <Font size="22.0" />
          </font>

@@ -6,86 +6,94 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="938.0" prefWidth="1693.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="273.0" layoutY="12.0" styleClass="fontdash" text="Management" textFill="#ff00a5">
-         <font>
-            <Font size="60.0" />
-         </font>
-      </Label>
-      <Label layoutX="25.0" layoutY="10.0" styleClass="fontdash" text="Product">
-         <font>
-            <Font size="60.0" />
-         </font>
-      </Label>
-      <TableView layoutX="26.0" layoutY="497.0" prefHeight="433.0" prefWidth="1634.0" styleClass="table">
-         <columns>
-            <TableColumn prefWidth="153.3333282470703" text="Product Id" />
-            <TableColumn prefWidth="212.66665649414062" text="Product Name" />
-            <TableColumn prefWidth="241.0" text="Date" />
-            <TableColumn prefWidth="253.6666259765625" text="Qty" />
-            <TableColumn prefWidth="218.3333740234375" text="Price" />
-            <TableColumn prefWidth="247.0" text="Item Type" />
-            <TableColumn prefWidth="301.6666259765625" text="Description" />
-         </columns>
-      </TableView>
-      <Button alignment="CENTER_RIGHT" layoutX="1356.0" layoutY="30.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="281.0" styleClass="btn" text="Manage Product">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="54.0" fitWidth="80.0" layoutX="1374.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asstes/icons8-edit-64.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="274.0" fitWidth="281.0" layoutX="172.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asstes/pro%205.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="274.0" fitWidth="281.0" layoutX="692.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asstes/Pro%202.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="274.0" fitWidth="281.0" layoutX="1232.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asstes/pro%206.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="184.0" layoutY="414.0" prefHeight="54.0" prefWidth="240.0" text="MakeUp  Set">
-         <font>
-            <Font name="System Bold" size="33.0" />
-         </font>
-      </Label>
-      <Label layoutX="694.0" layoutY="414.0" prefHeight="54.0" prefWidth="240.0" text="Body wash">
-         <font>
-            <Font name="System Bold" size="33.0" />
-         </font>
-      </Label>
-      <Label layoutX="1234.0" layoutY="414.0" prefHeight="54.0" prefWidth="240.0" text="Sun Cream">
-         <font>
-            <Font name="System Bold" size="33.0" />
-         </font>
-      </Label>
-      <Label layoutX="185.0" layoutY="443.0" prefHeight="54.0" prefWidth="240.0" text="Rs.1250/=" textFill="RED">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="695.0" layoutY="443.0" prefHeight="54.0" prefWidth="240.0" text="Rs.1250/=" textFill="RED">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="1236.0" layoutY="442.0" prefHeight="54.0" prefWidth="240.0" text="Rs.1250/=" textFill="RED">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
+      <Pane prefHeight="938.0" prefWidth="1693.0" stylesheets="@../style/style.css">
+         <children>
+            <Label layoutX="273.0" layoutY="12.0" styleClass="fontdash" text="Management" textFill="#ff00a5">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="10.0" styleClass="fontdash" text="Product">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Label>
+            <TableView layoutX="26.0" layoutY="497.0" prefHeight="433.0" prefWidth="1634.0" styleClass="table">
+               <columns>
+                  <TableColumn prefWidth="153.3333282470703" text="Product Id" />
+                  <TableColumn prefWidth="212.66665649414062" text="Product Name" />
+                  <TableColumn prefWidth="241.0" text="Date" />
+                  <TableColumn prefWidth="253.6666259765625" text="Qty" />
+                  <TableColumn prefWidth="218.3333740234375" text="Price" />
+                  <TableColumn prefWidth="247.0" text="Item Type" />
+                  <TableColumn prefWidth="301.6666259765625" text="Description" />
+               </columns>
+            </TableView>
+            <Button alignment="CENTER_RIGHT" layoutX="1340.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnManageProductOnAction" prefHeight="70.0" prefWidth="297.0" styleClass="btn" text="     Manage Product">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asstes/icons8-edit-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="274.0" fitWidth="281.0" layoutX="172.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/pro%205.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="274.0" fitWidth="281.0" layoutX="692.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/Pro%202.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="274.0" fitWidth="281.0" layoutX="1232.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/pro%206.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="184.0" layoutY="414.0" prefHeight="54.0" prefWidth="240.0" text="MakeUp  Set">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <Label layoutX="694.0" layoutY="414.0" prefHeight="54.0" prefWidth="240.0" text="Body wash">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <Label layoutX="1234.0" layoutY="414.0" prefHeight="54.0" prefWidth="240.0" text="Sun Cream">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <Label layoutX="185.0" layoutY="443.0" prefHeight="54.0" prefWidth="240.0" text="Rs.1250/=" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="695.0" layoutY="443.0" prefHeight="54.0" prefWidth="240.0" text="Rs.1250/=" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="1236.0" layoutY="442.0" prefHeight="54.0" prefWidth="240.0" text="Rs.1250/=" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
    </children>
-</Pane>
+</AnchorPane>
