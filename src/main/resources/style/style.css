@@ -1,0 +1,138 @@
+.font{
+    -fx-font-family: "Noto Sans";
+}
+.textBox{
+    -fx-font-size: 20;
+    -fx-border-radius: 40;
+    -fx-background-radius: 40;
+    -fx-border-color: #ff78ae;
+    -fx-text-fill: #000000;
+
+}
+.loginbtn{
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-background-color: #ff4b94;
+    -fx-text-fill: #000000;
+}
+.loginbtn:hover{
+    -fx-background-color: #ff4b94;
+    -fx-text-fill: #ffffff;
+}
+.signupbtn{
+    -fx-font-weight: 700;
+}
+.fontdash{
+    -fx-font-family: "Lucida Sans Unicode";
+}
+.btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #ff4b94;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-font-size:22;
+}
+
+.btn:hover {
+    -fx-background-color: #fc3c7f;
+    -fx-border-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+.table{
+    -fx-font: 'Noto Sans';
+    -fx-font-size: 15;
+}
+
+.text-prompt{
+
+    -fx-font-size: 20;
+    -fx-text-fill: #ee6ba0;
+}
+.productPane{
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-border-color: #ff0058;
+    -fx-background-color: #FEEDF4;
+    -fx-text-fill: #000000;
+    -fx-opacity: 100;
+}
+.addbtn{
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-background-color: #00ff9f;
+    -fx-text-fill: #000000;
+}
+.updatebtn{
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-background-color: #77522d;
+    -fx-text-fill: #000000;
+}
+.deletebtn{
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-background-color: #bd1904;
+    -fx-text-fill: #000000;
+}
+.clearbtn{
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-background-color: #5e5a5a;
+    -fx-text-fill: #000000;
+}
+.managebtn{
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-border-color: #000000;
+    -fx-background-color: #00ff9f;
+    -fx-text-fill: #000000;
+}
+.font3{
+    -fx-font-family: "monospace";
+    -fx-text-fill: #ffffff;
+}
+.font4{
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: #ff0058;
+}
+.lablebtn{
+    -fx-border-color: #000000;
+    -fx-border-radius: 50;
+    -fx-background-radius: 50;
+    -fx-text-alignment: Center;
+}
+.lablebtn:hover{
+    -fx-background-color: #ffb0ce;
+    -fx-text-fill: #000000
+}
+.bevel-grey {
+    -fx-background-color: linear-gradient(#fccbd7, #ffb0ce);
+    -fx-effect: dropshadow( three-pass-box , #ff4b94, 10, 0.0 , 1 , 2 );
+}
+.btncrud{
+    -fx-background-color: transparent;
+    -fx-border-color: #000000;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+
+}
+.sidePane{
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #000000;
+    -fx-background-color: #FEEDF4;
+    -fx-text-fill: #000000;
+    -fx-opacity: 100;
+}
+.Poppins{
+    -fx-text-fill: #000000;
+    -fx-font-family: Inter;
+    -fx-font-size: 55;
+    -fx-font-weight:bold;
+}
+
+.Poppins-14{
+    -fx-text-fill: #97eccc;
+    -fx-font-family: Inter;
+    -fx-font-size: 15;
+}

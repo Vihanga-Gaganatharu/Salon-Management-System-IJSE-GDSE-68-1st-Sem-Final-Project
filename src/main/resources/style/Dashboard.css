@@ -1,0 +1,69 @@
+.DashBtn {
+    /*-fx-background-color:*/
+    /*        linear-gradient(#ffffff, #1646d9),*/
+    /*        linear-gradient(#fcfcfc 0%, #07e874 50%, #019039 100%),*/
+    /*        linear-gradient(#ffffff 0%, #e7e7e7 100%);*/
+    -fx-background-color: indigo;
+    /*-fx-background-radius: 50,10;*/
+    -fx-background-insets: 0,2,2;
+    -fx-shape: M 320 100 L 580 100 L 660 180 L 660 480 Q 530 480 400 480 C 280 460 280 440 260 360 C 260 220 260 140 260 100 Z;
+    /*-fx-text-fill: black;*/
+    /*-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );*/
+
+}
+
+
+.custom-button{
+    -fx-shape: "M 320 100 L 580 100 L 660 180 L 660 480 Q 530 480 400 480 C 280 480 260 440 260 360 C 260 220 260 140 260 100 Z";
+    -fx-background-color:
+            linear-gradient(#414e4a, #1646d9),
+            linear-gradient(#414e4a 0%, #07e874 50%, #019039 100%),
+            linear-gradient(#475467 70%, rgb(55, 65, 80) 100%);
+
+    /*-fx-effect: dropshadow( gaussian , rgba(123, 120, 120, 0.69),90,0,0,5);*/
+    -fx-effect: dropshadow( three-pass-box , rgba(4, 217, 139, 0.28), 50, 0.0 , 0 , 0 );
+}
+.custom-button:hover{
+    -fx-effect: dropshadow( gaussian , rgba(74, 248, 159, 0.69),90,0,0,5);
+    -fx-background-color:
+            linear-gradient(#72f894, #1646d9),
+            linear-gradient(#0dc728 0%, #07e874 50%, #019039 100%),
+            linear-gradient(#6de85b 70%, rgb(11, 229, 130) 100%);
+
+}
+
+.time-text{
+    -fx-font-size: 50;
+    -fx-font-weight: bold;
+
+}
+
+.dah-txt{
+    -fx-text-fill: #147E27;
+    -fx-font-size: 30;
+
+}
+
+.dah-txt-2{
+    -fx-text-fill: #174420;
+    -fx-font-size: 12;
+
+}
+
+.page-nav-button{
+    -fx-background-color: #20C997;
+    -fx-background-radius: 10;
+    -fx-font-family: "Lucida Sans Unicode";
+    -fx-font-size: 15;
+    -fx-effect: dropshadow( three-pass-box , rgba(28, 49, 41, 0.28), 3, 0.0 , 0 , 1.0 );
+
+}
+.page-nav-time{
+    -fx-background-color: #F1FDF6;
+    -fx-background-radius: 10;
+    -fx-font-family: "Lucida Sans Unicode";
+    -fx-font-size: 15;
+    -fx-effect: dropshadow( three-pass-box , rgba(26, 33, 29, 0.28), 2.5, 0.0 , 0.0 , 1.0 );
+
+}
+

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashboard" prefHeight="1080.0" prefWidth="1980.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.Controller.MainFormController">
+   <children>
+      <ImageView fitHeight="1086.0" fitWidth="336.0" layoutX="-2.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asstes/Dash%20background.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="1706.0" layoutX="274.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asstes/Hedder.png" />
+         </image>
+      </ImageView>
+      <Button alignment="CENTER_RIGHT" layoutX="17.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="46.0" prefWidth="267.0" styleClass="btn" text="        Dashboard      ">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/Dashboard%20Icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="CENTER_RIGHT" layoutX="16.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnAppoinmentOnAction" prefHeight="46.0" prefWidth="267.0" styleClass="btn" text="     Appoinments    ">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/Appinment%20Icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="CENTER_RIGHT" layoutX="17.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="46.0" prefWidth="267.0" styleClass="btn" text="      Employee        ">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/Our%20Team.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="CENTER_RIGHT" layoutX="17.0" layoutY="503.0" mnemonicParsing="false" onAction="#btnProductOnAction" prefHeight="46.0" prefWidth="267.0" styleClass="btn" text="         Product         ">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/Prouduct%20Icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="CENTER_RIGHT" layoutX="17.0" layoutY="597.0" mnemonicParsing="false" onAction="#btnReportOnAction" prefHeight="46.0" prefWidth="267.0" styleClass="btn" text="        Reports          ">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/Report.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="CENTER_RIGHT" layoutX="17.0" layoutY="687.0" mnemonicParsing="false" onAction="#btnServiceOnAction" prefHeight="46.0" prefWidth="267.0" styleClass="btn" text="         Service           ">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/Services%20Icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="CENTER_RIGHT" layoutX="17.0" layoutY="776.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="46.0" prefWidth="267.0" styleClass="btn" text="        Customer       ">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/Customer%20Icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="CENTER_RIGHT" layoutX="14.0" layoutY="963.0" mnemonicParsing="false" onAction="#btnSignoutOnAction" prefHeight="46.0" prefWidth="267.0" styleClass="btn" text="       Signout         ">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asstes/Sign%20Out%20Icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ImageView fitHeight="198.0" fitWidth="209.0" layoutX="31.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asstes/Rectangle%201396.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1733.0" layoutY="19.0" prefHeight="70.0" prefWidth="140.0" text="Vihanga">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="1733.0" layoutY="49.0" prefHeight="70.0" prefWidth="140.0" text="Admin">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="86.0" fitWidth="97.0" layoutX="1626.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asstes/PRofile%20Image.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="bodypane" layoutX="290.0" layoutY="140.0" prefHeight="938.0" prefWidth="1693.0" />
+   </children>
+</AnchorPane>

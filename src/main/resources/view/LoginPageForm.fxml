@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginForm" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.Controller.LoginPageFormController">
+   <children>
+      <ImageView fitHeight="1042.0" fitWidth="1275.0" layoutX="348.0" layoutY="19.0" opacity="0.34" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asstes/Rectangle%201396.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="1074.0" fitWidth="873.0" layoutX="5.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asstes/gru10.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="952.0" fitWidth="620.0" layoutX="1073.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asstes/Login%20Text%20frame.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="216.0" fitWidth="214.0" layoutX="1703.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asstes/Rectangle%201396.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1118.0" layoutY="151.0" prefHeight="84.0" prefWidth="262.0" styleClass="Poppins" text="Login">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="1118.0" layoutY="193.0" prefHeight="84.0" prefWidth="480.0" styleClass="font" text="Glad  you'r Back">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="1164.0" layoutY="871.0" prefHeight="84.0" prefWidth="480.0" styleClass="font" text="You Don't Have Account">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="1164.0" layoutY="767.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="71.0" prefWidth="409.0" styleClass="loginbtn" text="Login">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font></Button>
+      <TextField fx:id="username" layoutX="1139.0" layoutY="367.0" prefHeight="53.0" prefWidth="473.0" promptText="Username" styleClass="lablebtn">
+         <font>
+            <Font size="31.0" />
+         </font></TextField>
+      <PasswordField fx:id="password" layoutX="1141.0" layoutY="528.0" prefHeight="52.0" prefWidth="467.0" promptText="Password" styleClass="lablebtn">
+         <font>
+            <Font size="31.0" />
+         </font></PasswordField>
+      <Button layoutX="1455.0" layoutY="892.0" mnemonicParsing="false" onAction="#btnSignupOnAction" prefHeight="37.0" prefWidth="104.0" styleClass="btn" text="Signup" textFill="#ff00e4">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
