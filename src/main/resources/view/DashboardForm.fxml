@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.Controller.DashboardFormController">
    <children>
       <Pane prefHeight="938.0" prefWidth="1693.0">
          <children>
@@ -86,7 +85,7 @@
                   </Label>
                </children>
             </Pane>
-            <ImageView fitHeight="103.0" fitWidth="187.0" layoutX="1091.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="103.0" fitWidth="187.0" layoutX="1074.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Salon_mona_Mange/src/main/resources/asstes/Abstractdasboard.png" />
                </image>
@@ -101,7 +100,7 @@
                   <Image url="@../asstes/Send%20Icon.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgDashImage" fitHeight="599.0" fitWidth="1356.0" layoutX="46.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgDashImage" fitHeight="599.0" fitWidth="1356.0" layoutX="16.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Salon_mona_Mange/src/main/resources/asstes/Leonardo_Diffusion_XL_salon_employees_2.jpg" />
                </image>
@@ -117,12 +116,12 @@
                </font>
             </Label>
             <Pane prefHeight="200.0" prefWidth="200.0" />
-            <TableView layoutX="1128.0" layoutY="309.0" prefHeight="599.0" prefWidth="510.0">
+            <TableView layoutX="1094.0" layoutY="362.0" prefHeight="546.0" prefWidth="513.0">
               <columns>
-                <TableColumn prefWidth="111.0" text="Appoinemnt  Id" />
-                <TableColumn minWidth="9.6666259765625" prefWidth="121.666748046875" text="Date" />
-                  <TableColumn prefWidth="121.0" text="Time" />
-                  <TableColumn prefWidth="156.0" text="Service" />
+                <TableColumn prefWidth="89.666748046875" text="Appoinemnt  Id" />
+                <TableColumn minWidth="9.6666259765625" prefWidth="105.3333740234375" text="Date" />
+                  <TableColumn prefWidth="120.0" text="Time" />
+                  <TableColumn prefWidth="131.0" text="Service" />
               </columns>
             </TableView>
          </children>

@@ -1,15 +1,25 @@
 package lk.ijse.salon.Controller;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import javafx.util.Duration;
 
+import javax.swing.text.html.ImageView;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class MainFormController {
 
@@ -19,6 +29,14 @@ public class MainFormController {
     @FXML
     private AnchorPane dashboard;
 
+    @FXML
+    private Label txtDate;
+
+    @FXML
+    private Label txtTime;
+
+
+
     public void initialize(){
         bodypane.getChildren().clear();
         try {
@@ -26,7 +44,36 @@ public class MainFormController {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+        loadTime();
+        loadData();
+
     }
+
+    public String timeNow() {
+        SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm:ss");
+        //System.out.println(dateFormat.format(new Date()));
+        return dateFormat.format(new Date()) ;
+    }
+
+    private void loadTime() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss");
+        txtDate.setText(LocalDate.now().toString());
+        Timeline timeline = new Timeline(new KeyFrame(javafx.util.Duration.ZERO, e -> {
+
+            txtTime.setText(timeNow());
+            // lblTime.setText(LocalDateTime.now().format(formatter));
+
+        }),
+                new KeyFrame(Duration.seconds(1)));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+
+    }
+
+    private void loadData() {
+
+    }
+
     @FXML
     void btnAppoinmentOnAction(ActionEvent event) {
         bodypane.getChildren().clear();

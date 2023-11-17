@@ -105,5 +105,15 @@
          </image>
       </ImageView>
       <Pane fx:id="bodypane" layoutX="290.0" layoutY="140.0" prefHeight="938.0" prefWidth="1693.0" />
+      <Label fx:id="txtTime" alignment="CENTER" layoutX="888.0" layoutY="19.0" prefHeight="77.0" prefWidth="286.0" text="22 : 00 : 13">
+         <font>
+            <Font name="System Bold" size="53.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtDate" alignment="CENTER" layoutX="879.0" layoutY="81.0" prefHeight="55.0" prefWidth="286.0" text="2023/11/10" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
