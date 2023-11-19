@@ -95,18 +95,18 @@
     -fx-font-family: "Times New Roman";
     -fx-text-fill: #ff0058;
 }
-.lablebtn{
-    -fx-border-color: #000000;
-    -fx-border-radius: 50;
-    -fx-background-radius: 50;
-    -fx-text-alignment: Center;
-}
-.lablebtn:hover{
-    -fx-background-color: #ffb0ce;
-    -fx-text-fill: #000000
-}
-.bevel-grey {
-    -fx-background-color: linear-gradient(#fccbd7, #ffb0ce);
+    .lablebtn{
+        -fx-border-color: #000000;
+        -fx-border-radius: 50;
+        -fx-background-radius: 50;
+        -fx-text-alignment: Center;
+    }
+    .lablebtn:hover{
+        -fx-background-color: #ffb0ce;
+        -fx-text-fill: #000000
+    }
+.bevel-grey {payments:
+    -fx-background-color linear-gradient(#fccbd7, #ffb0ce);
     -fx-effect: dropshadow( three-pass-box , #ff4b94, 10, 0.0 , 1 , 2 );
 }
 .btncrud{

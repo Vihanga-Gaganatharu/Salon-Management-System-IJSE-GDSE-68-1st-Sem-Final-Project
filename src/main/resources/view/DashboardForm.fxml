@@ -85,7 +85,7 @@
                   </Label>
                </children>
             </Pane>
-            <ImageView fitHeight="103.0" fitWidth="187.0" layoutX="1074.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="103.0" fitWidth="187.0" layoutX="1074.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Salon_mona_Mange/src/main/resources/asstes/Abstractdasboard.png" />
                </image>
@@ -100,7 +100,7 @@
                   <Image url="@../asstes/Send%20Icon.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgDashImage" fitHeight="599.0" fitWidth="1356.0" layoutX="16.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgDashImage" fitHeight="599.0" fitWidth="1356.0" layoutX="16.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Salon_mona_Mange/src/main/resources/asstes/Leonardo_Diffusion_XL_salon_employees_2.jpg" />
                </image>
@@ -115,12 +115,11 @@
                   <Font size="60.0" />
                </font>
             </Label>
-            <Pane prefHeight="200.0" prefWidth="200.0" />
-            <TableView layoutX="1094.0" layoutY="310.0" prefHeight="598.0" prefWidth="485.0">
+            <TableView layoutX="1094.0" layoutY="280.0" prefHeight="598.0" prefWidth="485.0">
               <columns>
-                <TableColumn prefWidth="89.666748046875" text="Appoinemnt  Id" />
-                <TableColumn minWidth="9.6666259765625" prefWidth="105.3333740234375" text="Date" />
-                  <TableColumn prefWidth="120.0" text="Time" />
+                <TableColumn prefWidth="112.6666259765625" text="Appoinemnt  Id" />
+                <TableColumn minWidth="9.6666259765625" prefWidth="97.3333740234375" text="Date" />
+                  <TableColumn prefWidth="106.666748046875" text="Time" />
                   <TableColumn prefWidth="167.0" text="Service" />
               </columns>
             </TableView>

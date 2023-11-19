@@ -15,9 +15,9 @@ public class Launcher extends Application{
     public void start(Stage stage) throws Exception{
         Parent parent = FXMLLoader.load(this.getClass().getResource("/View/LoginPageForm.fxml"));
         Scene scene = new Scene(parent);
-        stage.initStyle(StageStyle.UNDECORATED);
+       // stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Mona Beauty Salon");
-        stage.getIcons().add(new Image("D:\\Salon_mona_Mange\\src\\main\\resources\\asstes\\Rectangle 1396.png"));
+        stage.getIcons().add(new Image("D:\\Final Project\\salon-manage-final\\src\\main\\resources\\asstes\\logonnnnn.png"));
         stage.centerOnScreen();
         stage.setScene(scene);
         stage.show();
