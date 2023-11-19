@@ -96,14 +96,14 @@
                   <Font size="60.0" />
                </font>
             </Label>
-            <TableView layoutX="66.0" layoutY="258.0" prefHeight="596.0" prefWidth="1487.0" styleClass="table">
+            <TableView fx:id="tblAppoinment" layoutX="66.0" layoutY="258.0" prefHeight="596.0" prefWidth="1487.0" styleClass="table">
               <columns>
-                <TableColumn prefWidth="166.66665649414062" text="Appoinemnt Id" />
-                <TableColumn prefWidth="229.0" text="Date" />
-                  <TableColumn prefWidth="265.66668701171875" text="Time" />
-                  <TableColumn prefWidth="258.33331298828125" text="Employee Id" />
-                  <TableColumn prefWidth="226.0" text="Customer Id" />
-                  <TableColumn prefWidth="307.666748046875" text="Service Type" />
+                <TableColumn fx:id="colAppid" prefWidth="166.66665649414062" text="Appoinemnt Id" />
+                <TableColumn fx:id="colDate" prefWidth="229.0" text="Date" />
+                  <TableColumn fx:id="colTime" prefWidth="265.66668701171875" text="Time" />
+                  <TableColumn fx:id="colEmpid" prefWidth="258.33331298828125" text="Employee Id" />
+                  <TableColumn fx:id="colCusid" prefWidth="226.0" text="Customer Id" />
+                  <TableColumn fx:id="colService" prefWidth="307.666748046875" text="Service Type" />
               </columns>
             </TableView>
             <Button alignment="CENTER_RIGHT" layoutX="1209.0" layoutY="160.0" mnemonicParsing="false" onAction="#btnApooinmentOnAction" prefHeight="70.0" prefWidth="375.0" styleClass="btn" text="     Manage Appoinemnet   ">

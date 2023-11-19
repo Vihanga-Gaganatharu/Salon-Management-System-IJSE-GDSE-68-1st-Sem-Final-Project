@@ -24,15 +24,15 @@
                   <Font size="60.0" />
                </font>
             </Label>
-            <TableView layoutX="26.0" layoutY="626.0" prefHeight="304.0" prefWidth="1518.0" styleClass="table">
+            <TableView fx:id="tblEmployee" layoutX="26.0" layoutY="626.0" prefHeight="304.0" prefWidth="1518.0" styleClass="table">
                <columns>
-                  <TableColumn prefWidth="153.3333282470703" text="Employee Id" />
-                  <TableColumn prefWidth="212.66665649414062" text="First Name" />
-                  <TableColumn prefWidth="241.0" text="Last Name" />
-                  <TableColumn prefWidth="253.6666259765625" text="email" />
-                  <TableColumn prefWidth="165.0" text="Phone No" />
-                  <TableColumn prefWidth="195.0" text="Nic No" />
-                  <TableColumn prefWidth="294.0" text="Job Rank" />
+                  <TableColumn fx:id="colEmpid" prefWidth="153.3333282470703" text="Employee Id" />
+                  <TableColumn fx:id="colFname" prefWidth="212.66665649414062" text="First Name" />
+                  <TableColumn fx:id="colLname" prefWidth="241.0" text="Last Name" />
+                  <TableColumn fx:id="colEmail" prefWidth="253.6666259765625" text="email" />
+                  <TableColumn fx:id="colMobile" prefWidth="165.0" text="Phone No" />
+                  <TableColumn fx:id="colNic" prefWidth="195.0" text="Nic No" />
+                  <TableColumn fx:id="colRank" prefWidth="294.0" text="Job Rank" />
                </columns>
             </TableView>
             <Button alignment="CENTER_RIGHT" layoutX="1245.0" layoutY="50.0" mnemonicParsing="false" onAction="#btnManageEmpOnAction" prefHeight="70.0" prefWidth="292.0" styleClass="btn" text="  Manage Employee">
@@ -72,7 +72,7 @@
                   <Image url="@../asstes/Team%202.png" />
                </image>
             </ImageView>
-            <Label layoutX="184.0" layoutY="514.0" prefHeight="54.0" prefWidth="240.0" text="Sadun Dilshan">
+            <Label layoutX="154.0" layoutY="514.0" prefHeight="54.0" prefWidth="345.0" text="Mr.Sadun">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
@@ -82,7 +82,7 @@
                   <Font name="System Bold" size="33.0" />
                </font>
             </Label>
-            <Label layoutX="1134.0" layoutY="514.0" prefHeight="54.0" prefWidth="384.0" text="Miss.Ruwani B Dilshani">
+            <Label layoutX="1134.0" layoutY="514.0" prefHeight="54.0" prefWidth="384.0" text="Miss.Ruwi B Dilshani">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>

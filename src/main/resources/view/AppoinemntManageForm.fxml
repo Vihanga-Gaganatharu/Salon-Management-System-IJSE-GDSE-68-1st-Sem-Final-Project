@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="637.0" prefWidth="785.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.Controller.AppoinemntManageFormController">
+<AnchorPane prefHeight="637.0" prefWidth="785.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.Controller.EmployeeManageFormController">
    <children>
       <ImageView fitHeight="467.0" fitWidth="559.0" layoutX="109.0" layoutY="109.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -33,38 +33,38 @@
             <Font size="21.0" />
          </font>
       </TextField>
-      <TextField layoutX="425.0" layoutY="138.0" prefHeight="36.0" prefWidth="256.0" promptText="Time" styleClass="textBox">
+      <TextField fx:id="txtTime" layoutX="425.0" layoutY="138.0" prefHeight="36.0" prefWidth="256.0" promptText="Time" styleClass="textBox">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <TextField layoutX="425.0" layoutY="238.0" prefHeight="36.0" prefWidth="256.0" promptText="Service" styleClass="textBox">
+      <TextField fx:id="txtService" layoutX="425.0" layoutY="238.0" prefHeight="36.0" prefWidth="256.0" promptText="Service" styleClass="textBox">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <DatePicker layoutX="68.0" layoutY="251.0" prefHeight="44.0" prefWidth="256.0" styleClass="text-prompt" />
-      <Button alignment="CENTER_RIGHT" layoutX="54.0" layoutY="467.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Save" textFill="#0b8f33">
+      <DatePicker fx:id="txtDate" layoutX="68.0" layoutY="246.0" prefHeight="44.0" prefWidth="256.0" styleClass="text-prompt" />
+      <Button alignment="CENTER_RIGHT" layoutX="54.0" layoutY="467.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Save" textFill="#0b8f33">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER_RIGHT" layoutX="224.0" layoutY="467.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Update" textFill="#f59e11">
+      <Button alignment="CENTER_RIGHT" layoutX="224.0" layoutY="467.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Update" textFill="#f59e11">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER_RIGHT" layoutX="394.0" layoutY="467.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Delete" textFill="RED">
+      <Button alignment="CENTER_RIGHT" layoutX="394.0" layoutY="467.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Delete" textFill="RED">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER_RIGHT" layoutX="570.0" layoutY="467.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Clear" textFill="#727070">
+      <Button alignment="CENTER_RIGHT" layoutX="570.0" layoutY="467.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Clear" textFill="#727070">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER_RIGHT" layoutX="571.0" layoutY="27.0" mnemonicParsing="false" onAction="#btnAppoinemntSearchOnAction" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Search">
+      <Button fx:id="txtsearch" alignment="CENTER_RIGHT" layoutX="571.0" layoutY="27.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Search">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -100,7 +100,7 @@
             <String fx:value="textBox" />
          </styleClass>
       </ComboBox>
-      <ComboBox layoutX="429.0" layoutY="340.0" prefHeight="44.0" prefWidth="256.0" promptText="Customer Id">
+      <ComboBox fx:id="txtCustomerid" layoutX="429.0" layoutY="340.0" prefHeight="44.0" prefWidth="256.0" promptText="Customer Id">
          <styleClass>
             <String fx:value="text-prompt" />
             <String fx:value="textBox" />
