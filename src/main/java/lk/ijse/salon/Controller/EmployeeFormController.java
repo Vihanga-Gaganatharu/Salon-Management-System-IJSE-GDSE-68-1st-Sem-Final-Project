@@ -10,14 +10,22 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import lk.ijse.salon.db.DbConnection;
 import lk.ijse.salon.dto.EmployeeDto;
 import lk.ijse.salon.dto.tm.EmployeeTm;
 import lk.ijse.salon.model.EmployeeModel;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JRDesignQuery;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
@@ -45,6 +53,8 @@ public class EmployeeFormController {
 
         @FXML
         private TableColumn<?, ?> colRank;
+        @FXML
+        private TextField txtEmpIdSerarch;
 
         public void initialize() throws SQLException {
                 loadAllEmployee();
@@ -87,13 +97,37 @@ public class EmployeeFormController {
 
         }
 
+        void ReportbtnOnActhion() throws SQLException, JRException {
+                InputStream resourceAsStream = getClass().getResourceAsStream("/Reports/saloonManagment.jrxml");
+                JasperDesign load = JRXmlLoader.load(resourceAsStream);
+                JRDesignQuery jrDesignQuery = new JRDesignQuery();
+                jrDesignQuery.setText("SELECT * FROM employee WHERE emp_id = '" +txtEmpIdSerarch.getText()+"'");
+                load.setQuery(jrDesignQuery);
+
+                JasperReport jasperReport = JasperCompileManager.compileReport(load);
+                JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,null, DbConnection.getInstance().getConnection());
+                JasperViewer.viewReport(jasperPrint,false);
+        }
+
+        @FXML
+        void btnReportsEmpOnAction(ActionEvent event) {
+                try {
+                        ReportbtnOnActhion();
+                } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                } catch (JRException e) {
+                        throw new RuntimeException(e);
+                }
+
+        }
+
         private void loadAllEmployee() throws SQLException {
                 var model = new EmployeeModel();
 
                 ObservableList<EmployeeTm> obList = FXCollections.observableArrayList();
 
                 try{
-                        List<EmployeeDto> dtoList = model.loadAllEmployee();
+                        List<EmployeeDto> dtoList = model.getAllEmployees();
 
                         for(EmployeeDto dto : dtoList){
                                 obList.add(new EmployeeTm(

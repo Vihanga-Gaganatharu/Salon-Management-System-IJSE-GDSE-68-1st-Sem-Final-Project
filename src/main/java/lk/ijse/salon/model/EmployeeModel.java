@@ -94,30 +94,6 @@ public class EmployeeModel {
         return isSaved;
     }
 
-    public List<EmployeeDto> loadAllEmployee() throws SQLException {
-        Connection connection = DbConnection.getInstance().getConnection();
-
-        String sql = "SELECT * FROM employee";
-        ResultSet resultSet = connection.prepareStatement(sql).executeQuery();
-
-        List<EmployeeDto> ScheduleList = new ArrayList<>();
-
-        while (resultSet.next()) {
-            ScheduleList.add(new EmployeeDto(
-                    resultSet.getString(1),
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    resultSet.getString(4),
-                    resultSet.getString(5),
-                    resultSet.getString(6),
-                    resultSet.getString(7),
-                    resultSet.getString(8),
-                    resultSet.getString(9)
-            ));
-        }
-        return ScheduleList;
-    }
-
     public boolean updateEmployee(EmployeeDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -136,12 +112,45 @@ public class EmployeeModel {
 
         return statement.executeUpdate() > 0;
     }
-/*
-    public EmployeeDto searchEmployee(String eId) {
 
+    public EmployeeDto searchEmployee(String eId) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "Select * from employee where emp_id = ?";
+        var pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1, eId);
+
+        ResultSet resultSet = pstm.executeQuery();
+        EmployeeDto dto= null;
+
+        if (resultSet.next()){
+            dto = new EmployeeDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getString(5),
+                    resultSet.getString(6),
+                    resultSet.getString(7),
+                    resultSet.getString(8),
+                    resultSet.getString(9)
+            );
+        }
+        return dto;
     }
 
-    public boolean deleteEmployee(String eId) {
-    }*/
+    public boolean deleteEmployee(String eId) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "delete from employee where emp_id = ?";
+        var pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1, eId);
+
+        return pstm.executeUpdate() > 0;
+    }
+
+
 }
 

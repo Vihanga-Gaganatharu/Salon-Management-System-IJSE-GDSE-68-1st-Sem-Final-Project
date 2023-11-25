@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -35,31 +36,7 @@
                   <TableColumn prefWidth="254.6666259765625" text="Gender" />
                </columns>
             </TableView>
-            <Pane layoutX="1228.0" layoutY="146.0" prefHeight="164.0" prefWidth="363.0" styleClass="productPane">
-               <children>
-                  <Label layoutX="26.0" layoutY="86.0" prefHeight="55.0" prefWidth="247.0" text="Best Customer">
-                     <font>
-                        <Font name="System Bold" size="35.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="28.0" layoutY="109.0" prefHeight="55.0" prefWidth="247.0" text="Appoinments  = 5">
-                     <font>
-                        <Font name="System Bold Italic" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="25.0" layoutY="46.0" prefHeight="55.0" prefWidth="247.0" text="Mr. Nipuna" textFill="#ff33a4">
-                     <font>
-                        <Font name="System Bold" size="35.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="55.0" fitWidth="75.0" layoutX="19.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../asstes/icons8-update-48.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-            <Pane id="DASHBOARD  HEAD" layoutX="508.0" layoutY="170.0" prefHeight="121.0" prefWidth="244.0" style="-fx-background-color: FFF4DE;">
+            <Pane id="DASHBOARD  HEAD" layoutX="378.0" layoutY="170.0" prefHeight="121.0" prefWidth="244.0" style="-fx-background-color: FFF4DE;">
                <children>
                   <Label layoutX="14.0" layoutY="55.0" text="Today Appoinment">
                      <font>
@@ -83,7 +60,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane id="DASHBOARD  HEAD" layoutX="238.0" layoutY="170.0" prefHeight="121.0" prefWidth="244.0" style="-fx-background-color: F3E8FF;">
+            <Pane id="DASHBOARD  HEAD" layoutX="58.0" layoutY="170.0" prefHeight="121.0" prefWidth="244.0" style="-fx-background-color: F3E8FF;">
                <children>
                   <Label layoutX="14.0" layoutY="55.0" text="New Customers">
                      <font>
@@ -107,7 +84,7 @@
                   </Label>
                </children>
             </Pane>
-            <Button alignment="CENTER_RIGHT" layoutX="1236.0" layoutY="44.0" mnemonicParsing="false" onAction="#btnManageCustOnAction" prefHeight="71.0" prefWidth="360.0" text="         Manage Customers" textFill="#00ff57">
+            <Button fx:id="GenReportCus" alignment="CENTER_RIGHT" layoutX="1247.0" layoutY="244.0" mnemonicParsing="false" onAction="#btnReportOnAction" prefHeight="71.0" prefWidth="305.0" text="    Genarate Reports" textFill="#00ff57">
                <font>
                   <Font size="22.0" />
                </font>
@@ -118,11 +95,16 @@
                <graphic>
                   <ImageView fitHeight="55.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../asstes/icons8-edit-64.png" />
+                        <Image url="@../asstes/icons8-update-48.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
+            <TextField fx:id="txtGenreportsCusId" layoutX="897.0" layoutY="248.0" onAction="#btnSearchCusdOnAction" prefHeight="63.0" prefWidth="305.0" promptText="Enter Customer Id To reports" styleClass="lablebtn">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
          </children>
       </Pane>
    </children>

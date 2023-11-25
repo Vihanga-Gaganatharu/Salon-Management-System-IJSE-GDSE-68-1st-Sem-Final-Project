@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -35,18 +36,6 @@
                   <TableColumn fx:id="colRank" prefWidth="294.0" text="Job Rank" />
                </columns>
             </TableView>
-            <Button alignment="CENTER_RIGHT" layoutX="1245.0" layoutY="50.0" mnemonicParsing="false" onAction="#btnManageEmpOnAction" prefHeight="70.0" prefWidth="292.0" styleClass="btn" text="  Manage Employee">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="54.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../asstes/icons8-edit-64.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
             <Label layoutX="38.0" layoutY="139.0" onMouseClicked="#txtEmpAttndence" prefHeight="38.0" prefWidth="320.0" styleClass="font" text="Employee Attdendance" textFill="#ff00e9" underline="true">
                <font>
                   <Font size="27.0" />
@@ -67,22 +56,12 @@
                   <Image url="@../asstes/Team%20%201.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="274.0" fitWidth="281.0" layoutX="1132.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../asstes/Team%202.png" />
-               </image>
-            </ImageView>
             <Label layoutX="154.0" layoutY="514.0" prefHeight="54.0" prefWidth="345.0" text="Mr.Sadun">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
             </Label>
             <Label layoutX="644.0" layoutY="514.0" prefHeight="54.0" prefWidth="240.0" text="Miss.Shehara">
-               <font>
-                  <Font name="System Bold" size="33.0" />
-               </font>
-            </Label>
-            <Label layoutX="1134.0" layoutY="514.0" prefHeight="54.0" prefWidth="384.0" text="Miss.Ruwi B Dilshani">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
@@ -97,11 +76,23 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="1136.0" layoutY="542.0" prefHeight="54.0" prefWidth="240.0" text="Specilist Of Brilel Dressing" textFill="RED">
+            <Button alignment="CENTER_RIGHT" layoutX="1234.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnReportsEmpOnAction" prefHeight="70.0" prefWidth="292.0" styleClass="btn" text="   Employee Reports">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
-            </Label>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asstes/icons8-edit-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="txtEmpIdSerarch" layoutX="1048.0" layoutY="115.0" prefHeight="55.0" prefWidth="488.0" promptText="Search EmpId To Report" styleClass="lablebtn">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
          </children>
       </Pane>
    </children>

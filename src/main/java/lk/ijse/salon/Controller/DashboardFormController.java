@@ -15,11 +15,11 @@ public class DashboardFormController {
                 try {
                     while (true) {
                         imgDashImage.setImage(new Image("/asstes/Leonardo_Diffusion_XL_salon_working_1.jpg"));
-                        sleep(3000);
+                        sleep(2000);
                         imgDashImage.setImage(new Image("/asstes/Leonardo_Diffusion_XL_salon_working_2.jpg"));
-                        sleep(3000);
+                        sleep(2000);
                         imgDashImage.setImage(new Image("/asstes/Leonardo_Diffusion_XL_salon_employees_2.jpg"));
-                        sleep(3000);
+                        sleep(2000);
                     }
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);

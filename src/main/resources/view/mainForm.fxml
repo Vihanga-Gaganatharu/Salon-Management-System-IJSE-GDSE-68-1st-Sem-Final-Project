@@ -128,7 +128,7 @@
             <Image url="@../asstes/PRofile%20Image.png" />
          </image>
       </ImageView>
-      <Pane fx:id="bodypane" layoutX="290.0" layoutY="140.0" prefHeight="938.0" prefWidth="1693.0" />
+      <Pane fx:id="bodypane" layoutX="290.0" layoutY="140.0" prefHeight="932.0" prefWidth="1685.0" />
       <Label fx:id="txtTime" alignment="CENTER" layoutX="878.0" layoutY="9.0" prefHeight="77.0" prefWidth="286.0" text="22 : 00 : 13">
          <font>
             <Font name="System Bold" size="53.0" />

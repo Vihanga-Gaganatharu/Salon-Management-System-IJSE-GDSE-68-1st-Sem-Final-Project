@@ -12,5 +12,4 @@ public class AppoinmentDto {
     private String c_id;
     private String date;
     private String time;
-    private String service;
 }

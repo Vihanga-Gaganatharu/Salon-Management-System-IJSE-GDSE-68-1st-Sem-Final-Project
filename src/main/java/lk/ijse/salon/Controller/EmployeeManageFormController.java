@@ -78,35 +78,67 @@ public class EmployeeManageFormController {
         }
     }
 
-    public void btnDeleteOnAction(ActionEvent actionEvent) {
+    public void btnDeleteOnAction(ActionEvent actionEvent) throws SQLException {
         String E_id = txtEmployeeid.getText();
         var model = new EmployeeModel();
 
-        try{
-            var EmployeeModel = new EmployeeModel();
+        var EmployeeModel = new EmployeeModel();
+        EmployeeDto dto = model.searchEmployee(E_id);
+        if(dto != null) {
+            boolean isDeleted = model.deleteEmployee(E_id);
+            if (isDeleted) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Employee Delete Succesfull!!!").show();
+            }
+        }else {
+            new Alert(Alert.AlertType.ERROR, "Employee Not Found!!!").show();
+        }
+    }
+
+    public void btnClearOnAction(ActionEvent actionEvent) {
+        txtEmployeeid.setText("");
+        txtFname.setText("");
+        txtLname.setText("");
+        txtEmail.setText("");
+        txtMobile.setText("");
+        txtNic.setText("");
+        txtRank.setText("");
+        txtUsername.setText("");
+        txtPassword.setText("");
+
+    }
+
+    public void btnSearchOnAction(ActionEvent actionEvent) {
+        String E_id = txtEmployeeid.getText();
+
+        var model = new EmployeeModel();
+        try {
             EmployeeDto dto = model.searchEmployee(E_id);
-            if(dto != null) {
-                boolean isDeleted = model.deleteEmployee(E_id);
-                if (isDeleted) {
-                    new Alert(Alert.AlertType.CONFIRMATION, "Schedule Delete Succesfull!!!").show();
-                }
+
+            if (dto != null){
+                fillFields(dto);
             }else {
-                new Alert(Alert.AlertType.ERROR, "Schedule Not Found!!!").show();
+                new Alert(Alert.AlertType.WARNING, "Employee not found");
             }
         } catch (SQLException e){
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }
 
-    public void btnClearOnAction(ActionEvent actionEvent) {
-    }
-
-    public void btnSearchOnAction(ActionEvent actionEvent) {
+    private void fillFields(EmployeeDto dto) {
+        txtEmployeeid.setText(dto.getEmp_id());
+        txtFname.setText(dto.getFirst_name());
+        txtLname.setText(dto.getLast_name());
+        txtEmail.setText(dto.getEmail());
+        txtMobile.setText(dto.getPhone_number());
+        txtNic.setText(dto.getNic());
+        txtRank.setText(dto.getJob_rank());
+        txtUsername.setText(dto.getUsername());
+        txtPassword.setText(dto.getPassword());
     }
 
     private boolean validateEmployee (){
         String E_id = txtEmployeeid.getText();
-        boolean sidValidation = Pattern.compile("[S][0-9]{3,}").matcher(E_id).matches();
+        boolean sidValidation = Pattern.compile("[E][0-9]{3,}").matcher(E_id).matches();
         if (!sidValidation) {
             new Alert(Alert.AlertType.ERROR, "Invalid Employee ID").show();
             txtEmployeeid.requestFocus();
@@ -139,9 +171,14 @@ public class EmployeeManageFormController {
         String mobileText = txtMobile.getText();
         boolean isEmployeeMobileValidated = Pattern.matches("[0-9]{10}", mobileText);
         if (!isEmployeeMobileValidated) {
-            new Alert(Alert.AlertType.ERROR, "Invalid Employee mobile").show();
+//            new Alert(Alert.AlertType.ERROR, "Invalid Employee mobile").show();'
+            txtMobile.setStyle("-fx-text-fill: red;");
+
             return false;
+        }else {
+            txtMobile.setStyle("-fx-text-fill: black;");
         }
+
 
         String nicText = txtMobile.getText();
         boolean isNicValidated = Pattern.matches("[0-9]{10}", nicText);
@@ -164,12 +201,6 @@ public class EmployeeManageFormController {
             return false;
         }
 
-        String password = txtPassword.getText();
-        boolean isEmpPasswordValidated = Pattern.matches("[A-Za-z]{3,}", password);
-        if (!isEmpPasswordValidated) {
-            new Alert(Alert.AlertType.ERROR, "Invalid Employee password").show();
-            return false;
-        }
         return true;
     }
 }
