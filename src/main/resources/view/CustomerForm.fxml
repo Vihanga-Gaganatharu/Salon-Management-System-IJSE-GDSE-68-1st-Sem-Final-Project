@@ -84,27 +84,32 @@
                   </Label>
                </children>
             </Pane>
-            <Button fx:id="GenReportCus" alignment="CENTER_RIGHT" layoutX="1247.0" layoutY="244.0" mnemonicParsing="false" onAction="#btnReportOnAction" prefHeight="71.0" prefWidth="305.0" text="    Genarate Reports" textFill="#00ff57">
+            <Button fx:id="GenReportCus" alignment="CENTER_RIGHT" layoutX="1181.0" layoutY="242.0" mnemonicParsing="false" onAction="#btnReportOnAction" prefHeight="57.0" prefWidth="335.0" text="    Genarate Reports" textFill="#00ff57">
                <font>
-                  <Font size="22.0" />
+                  <Font size="18.0" />
                </font>
                <styleClass>
                   <String fx:value="font" />
                   <String fx:value="btn" />
                </styleClass>
                <graphic>
-                  <ImageView fitHeight="55.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="44.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../asstes/icons8-update-48.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <TextField fx:id="txtGenreportsCusId" layoutX="897.0" layoutY="248.0" onAction="#btnSearchCusdOnAction" prefHeight="63.0" prefWidth="305.0" promptText="Enter Customer Id To reports" styleClass="lablebtn">
+            <TextField fx:id="txtGenreportsCusId" layoutX="811.0" layoutY="231.0" onAction="#btnSearchCusdOnAction" prefHeight="63.0" prefWidth="305.0" promptText="Enter Customer Id To reports" styleClass="lablebtn">
                <font>
                   <Font size="19.0" />
                </font>
             </TextField>
+            <Button layoutX="1359.0" layoutY="57.0" mnemonicParsing="false" onAction="#btnManageCustOnAction" prefHeight="43.0" prefWidth="200.0" styleClass="loginbtn" text="Manage Customers">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

@@ -140,33 +140,44 @@ public class EmployeeManageFormController {
         String E_id = txtEmployeeid.getText();
         boolean sidValidation = Pattern.compile("[E][0-9]{3,}").matcher(E_id).matches();
         if (!sidValidation) {
-            new Alert(Alert.AlertType.ERROR, "Invalid Employee ID").show();
-            txtEmployeeid.requestFocus();
+            txtEmployeeid.setStyle("-fx-border-color: red;");
             return false;
+
+        }else {
+            txtEmployeeid.setStyle("-fx-border-color: #08ff00;");
         }
+
 
         String fName = txtFname.getText();
         boolean fNameValidation = Pattern.compile("[A-Za-z .]{3,}").matcher(fName).matches();
         if (!fNameValidation) {
-            new Alert(Alert.AlertType.ERROR, "Invalid Employee Name").show();
-            txtFname.requestFocus();
-            return false;
-        }
+        txtFname.setStyle("-fx-border-color: red;");
+        return false;
+
+    }else {
+        txtFname.setStyle("-fx-border-color: #08ff00;");
+    }
 
         String lName = txtLname.getText();
         boolean lNameValidation = Pattern.compile("[A-Za-z .]{3,}").matcher(lName).matches();
         if (!lNameValidation) {
-            new Alert(Alert.AlertType.ERROR, "Invalid Employee Name").show();
-            txtLname.requestFocus();
+            txtLname.setStyle("-fx-border-color: red;");
             return false;
+
+        }else {
+            txtLname.setStyle("-fx-border-color: #08ff00;");
         }
 
         String emailText = txtEmail.getText();
         boolean isEmployeeEmailValidated = Pattern.matches("[A-Za-z0-9@.]{3,}", emailText);
         if (!isEmployeeEmailValidated) {
-            new Alert(Alert.AlertType.ERROR, "Invalid Employee email").show();
+            txtEmail.setStyle("-fx-border-color: red;");
             return false;
+        }else {
+            txtEmail.setStyle("-fx-border-color: #08ff00;");
         }
+
+
 
         String mobileText = txtMobile.getText();
         boolean isEmployeeMobileValidated = Pattern.matches("[0-9]{10}", mobileText);
@@ -176,29 +187,39 @@ public class EmployeeManageFormController {
 
             return false;
         }else {
-            txtMobile.setStyle("-fx-text-fill: black;");
+            txtMobile.setStyle("-fx-text-fill: #56f648;");
         }
 
 
-        String nicText = txtMobile.getText();
+        String nicText = txtNic.getText();
         boolean isNicValidated = Pattern.matches("[0-9]{10}", nicText);
         if (!isNicValidated) {
-            new Alert(Alert.AlertType.ERROR, "Invalid Employee nic").show();
+            txtNic.setStyle("-fx-text-fill: red;");
+
             return false;
+        }else {
+            txtNic.setStyle("-fx-text-fill: #56f648;");
         }
+
 
         String rank = txtRank.getText();
         boolean isEmprankValidated = Pattern.matches("[A-Za-z]{3,}", rank);
         if (!isEmprankValidated) {
-            new Alert(Alert.AlertType.ERROR, "Invalid Employee Rank").show();
+            txtRank.setStyle("-fx-text-fill: red;");
+
             return false;
+        }else {
+            txtRank.setStyle("-fx-text-fill: #56f648;");
         }
 
         String userName = txtUsername.getText();
         boolean isEmployeeIdValidated = Pattern.matches("[E][0-9]{3,}", userName);
         if (!isEmployeeIdValidated) {
-            new Alert(Alert.AlertType.ERROR, "Invalid user id").show();
+            txtUsername.setStyle("-fx-text-fill: red;");
+
             return false;
+        }else {
+            txtUsername.setStyle("-fx-text-fill: #56f648;");
         }
 
         return true;

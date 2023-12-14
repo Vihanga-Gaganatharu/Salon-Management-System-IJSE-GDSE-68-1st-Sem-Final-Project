@@ -152,5 +152,16 @@ public class EmployeeModel {
     }
 
 
+    public int getAllEmployee() throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+        ResultSet resultSet = connection.prepareStatement("SELECT count(*) from employee").executeQuery();
+        int count = 0;
+        while (resultSet.next()){
+            count+=resultSet.getInt(1);
+        }
+        return count;
+
+
+    }
 }
 

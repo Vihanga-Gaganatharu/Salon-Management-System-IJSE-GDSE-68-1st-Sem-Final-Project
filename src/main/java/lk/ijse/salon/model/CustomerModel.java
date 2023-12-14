@@ -100,4 +100,17 @@ public class CustomerModel {
         }
         return dto;
     }
+
+
+    public int getAllCustomer() throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+        ResultSet resultSet = connection.prepareStatement("SELECT count(*) from customers").executeQuery();
+        int count = 0;
+        while (resultSet.next()){
+            count+=resultSet.getInt(1);
+        }
+        return count;
+
+
+    }
 }

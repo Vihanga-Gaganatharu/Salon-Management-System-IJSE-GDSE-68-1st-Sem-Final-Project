@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,7 +14,7 @@
          <children>
             <Pane id="DASHBOARD  HEAD" layoutX="1078.0" layoutY="50.0" prefHeight="121.0" prefWidth="244.0" style="-fx-background-color: FFF4DE;">
                <children>
-                  <Label layoutX="14.0" layoutY="55.0" text="Today Appoinment">
+                  <Label layoutX="14.0" layoutY="55.0" text="Total Appoinment">
                      <font>
                         <Font name="System Bold" size="22.0" />
                      </font>
@@ -25,7 +24,7 @@
                         <Image url="@../asstes/Total%20Icon.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="74.0" layoutY="4.0" text="29">
+                  <Label fx:id="labTotalAppoinemnts" layoutX="74.0" layoutY="4.0" text="29">
                      <font>
                         <Font size="39.0" />
                      </font>
@@ -39,7 +38,7 @@
             </Pane>
             <Pane id="DASHBOARD  HEAD" layoutX="1348.0" layoutY="50.0" prefHeight="121.0" prefWidth="244.0" style="-fx-background-color: FC9AC2;">
                <children>
-                  <Label layoutX="14.0" layoutY="55.0" text="Total Appinment">
+                  <Label layoutX="14.0" layoutY="55.0" text="Total Employee">
                      <font>
                         <Font name="System Bold" size="22.0" />
                      </font>
@@ -49,7 +48,7 @@
                         <Image url="@../asstes/New%20CIcon.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="74.0" layoutY="4.0" text="29">
+                  <Label fx:id="lblemployeecount" layoutX="74.0" layoutY="4.0" text="29">
                      <font>
                         <Font size="39.0" />
                      </font>
@@ -73,7 +72,7 @@
                         <Image url="@../../../../../../Salon_mona_Mange/src/main/resources/asstes/New%20CIcon.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="74.0" layoutY="4.0" text="29">
+                  <Label fx:id="lblcustomercount" layoutX="74.0" layoutY="4.0" text="29">
                      <font>
                         <Font size="39.0" />
                      </font>
@@ -115,14 +114,7 @@
                   <Font size="60.0" />
                </font>
             </Label>
-            <TableView layoutX="1094.0" layoutY="280.0" prefHeight="598.0" prefWidth="485.0">
-              <columns>
-                <TableColumn prefWidth="112.6666259765625" text="Appoinemnt  Id" />
-                <TableColumn minWidth="9.6666259765625" prefWidth="97.3333740234375" text="Date" />
-                  <TableColumn prefWidth="106.666748046875" text="Time" />
-                  <TableColumn prefWidth="167.0" text="Service" />
-              </columns>
-            </TableView>
+            <PieChart fx:id="pieChart" layoutX="1098.0" layoutY="290.0" prefHeight="599.0" prefWidth="500.0" />
          </children>
       </Pane>
    </children>

@@ -108,4 +108,14 @@ public class ServiceModel {
 
         return isSaved;
     }
+
+    public boolean deleteService(final String Service_ID) throws SQLException {
+        Connection connection=DbConnection.getInstance().getConnection();
+        String sql="DELETE  FROM service WHERE Service_Id=?";
+        PreparedStatement pstm= connection.prepareStatement(sql);
+        pstm.setString(1,Service_ID);
+
+        boolean isDeleted=pstm.executeUpdate()>0;
+        return  isDeleted;
+    }
 }

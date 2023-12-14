@@ -24,18 +24,18 @@
                   <Font size="60.0" />
                </font>
             </Label>
-            <TableView layoutX="26.0" layoutY="497.0" prefHeight="433.0" prefWidth="1542.0" styleClass="table">
+            <TableView fx:id="table" layoutX="26.0" layoutY="497.0" prefHeight="433.0" prefWidth="1542.0" styleClass="table">
                <columns>
-                  <TableColumn prefWidth="153.3333282470703" text="Product Id" />
-                  <TableColumn prefWidth="212.66665649414062" text="Product Name" />
-                  <TableColumn prefWidth="189.0" text="Date" />
-                  <TableColumn prefWidth="128.0" text="Qty" />
-                  <TableColumn prefWidth="237.0" text="Price" />
-                  <TableColumn prefWidth="231.0" text="Item Type" />
-                  <TableColumn prefWidth="372.0" text="Description" />
+                  <TableColumn fx:id="p_id" prefWidth="153.3333282470703" text="Product Id" />
+                  <TableColumn fx:id="name" prefWidth="212.66665649414062" text="Product Name" />
+                  <TableColumn fx:id="date" prefWidth="189.0" text="Date" />
+                  <TableColumn fx:id="qty" prefWidth="128.0" text="Qty" />
+                  <TableColumn fx:id="price" prefWidth="237.0" text="Price" />
+                  <TableColumn fx:id="item_type" prefWidth="231.0" text="Item Type" />
+                  <TableColumn fx:id="discription" prefWidth="372.0" text="Description" />
                </columns>
             </TableView>
-            <Button alignment="CENTER_RIGHT" layoutX="1270.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnManageProductOnAction" prefHeight="70.0" prefWidth="297.0" styleClass="btn" text="     Manage Product">
+            <Button alignment="CENTER_RIGHT" layoutX="1217.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnManageProductOnAction" prefHeight="74.0" prefWidth="350.0" styleClass="btn" text="     Manage Product">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

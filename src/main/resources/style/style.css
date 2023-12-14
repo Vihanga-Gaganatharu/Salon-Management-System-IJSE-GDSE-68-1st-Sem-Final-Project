@@ -26,17 +26,20 @@
     -fx-font-family: "Lucida Sans Unicode";
 }
 .btn {
-    -fx-background-color: transparent;
-    -fx-border-color: #ff4b94;
+    -fx-background-color: #ff88b0;
+    -fx-border-color: #ff0068;
     -fx-border-radius: 30;
     -fx-background-radius: 30;
-    -fx-font-size:22;
+    -fx-font-size:26;
+    -fx-cursor: hand;
+    -fx-font-weight: 900;
+    -fx-text-fill: #ffffff;
 }
 
 .btn:hover {
-    -fx-background-color: #fc3c7f;
+    -fx-background-color: #f584b2;
     -fx-border-color: #000000;
-    -fx-text-fill: #ffffff;
+    -fx-text-fill: #000000;
 }
 .table{
     -fx-font: 'Noto Sans';

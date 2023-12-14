@@ -98,11 +98,6 @@
             <Image url="@../asstes/Search%20Icon.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtRank" layoutX="425.0" layoutY="378.0" prefHeight="36.0" prefWidth="256.0" promptText="Job Rank" styleClass="textBox">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </TextField>
       <TextField fx:id="txtPrice" layoutX="63.0" layoutY="303.0" prefHeight="36.0" prefWidth="256.0" promptText="Price" styleClass="textBox">
          <font>
             <Font size="21.0" />

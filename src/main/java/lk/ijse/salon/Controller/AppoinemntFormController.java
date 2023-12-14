@@ -65,7 +65,7 @@ public class AppoinemntFormController implements Initializable {
         try {
             boolean b = AppoinmentModel.plaseOrder(dto, list);
             if (b){
-                new Alert(Alert.AlertType.CONFIRMATION,"yes hutto").show();
+                new Alert(Alert.AlertType.CONFIRMATION,"Booking Confirme").show();
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -79,6 +79,7 @@ public class AppoinemntFormController implements Initializable {
     }
 
     public void btnCancel(ActionEvent actionEvent) {
+
 
     }
 

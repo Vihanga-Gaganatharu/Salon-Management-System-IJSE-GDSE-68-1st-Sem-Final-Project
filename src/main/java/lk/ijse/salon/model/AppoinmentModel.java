@@ -113,4 +113,15 @@ public class AppoinmentModel {
         return isSaved;
     }
 
+    public int getAllAppoinemts() throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+        ResultSet resultSet = connection.prepareStatement("SELECT count(*) from booking").executeQuery();
+        int count = 0;
+        while (resultSet.next()){
+            count+=resultSet.getInt(1);
+        }
+        return count;
+
+
+    }
 }

@@ -16,12 +16,12 @@
             <Image url="@../asstes/Rectangle%201396.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="1074.0" fitWidth="873.0" layoutX="5.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="1074.0" fitWidth="873.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asstes/gru10.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="952.0" fitWidth="620.0" layoutX="1073.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="952.0" fitWidth="620.0" layoutX="1123.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asstes/Login%20Text%20frame.png" />
          </image>
@@ -31,37 +31,27 @@
             <Image url="@../asstes/Rectangle%201396.png" />
          </image>
       </ImageView>
-      <Label layoutX="1118.0" layoutY="151.0" prefHeight="84.0" prefWidth="262.0" styleClass="Poppins" text="Login">
+      <Label layoutX="1168.0" layoutY="161.0" prefHeight="84.0" prefWidth="262.0" styleClass="Poppins" text="Login">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="1118.0" layoutY="193.0" prefHeight="84.0" prefWidth="480.0" styleClass="font" text="Glad  you'r Back">
+      <Label layoutX="1168.0" layoutY="203.0" prefHeight="84.0" prefWidth="480.0" styleClass="font" text="Glad  you'r Back">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="1164.0" layoutY="871.0" prefHeight="84.0" prefWidth="480.0" styleClass="font" text="You Don't Have Account">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
-      <Button layoutX="1164.0" layoutY="767.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="71.0" prefWidth="409.0" styleClass="loginbtn" text="Login">
+      <Button layoutX="1214.0" layoutY="777.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="71.0" prefWidth="409.0" styleClass="loginbtn" text="Login">
          <font>
             <Font name="System Bold" size="33.0" />
          </font></Button>
-      <TextField fx:id="username" layoutX="1139.0" layoutY="367.0" prefHeight="53.0" prefWidth="473.0" promptText="Username" styleClass="lablebtn">
+      <TextField fx:id="username" layoutX="1189.0" layoutY="377.0" prefHeight="53.0" prefWidth="473.0" promptText="Username" styleClass="lablebtn">
          <font>
             <Font size="31.0" />
          </font></TextField>
-      <PasswordField fx:id="password" layoutX="1141.0" layoutY="528.0" prefHeight="52.0" prefWidth="467.0" promptText="Password" styleClass="lablebtn">
+      <PasswordField fx:id="password" layoutX="1191.0" layoutY="538.0" prefHeight="52.0" prefWidth="467.0" promptText="Password" styleClass="lablebtn">
          <font>
             <Font size="31.0" />
          </font></PasswordField>
-      <Button layoutX="1455.0" layoutY="892.0" mnemonicParsing="false" onAction="#btnSignupOnAction" prefHeight="37.0" prefWidth="104.0" styleClass="btn" text="Signup" textFill="#ff00e4">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

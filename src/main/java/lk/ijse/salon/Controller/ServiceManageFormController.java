@@ -111,13 +111,25 @@ public class ServiceManageFormController {
     }
  @FXML
     void btnServiceClear(ActionEvent event) {
-
-
-
+     txtSerciceDescription.setText("");
+     txtServiceName.setText("");
+     txtServiceId.setText("");
+     txtServicePrice.setText("");
     }
 
     @FXML
     void btnServiceDelete(ActionEvent event) {
+        String service_id=txtServiceId.getText();
+        var model=new ServiceModel();
+        try{
+            boolean isDeleted=model.deleteService(service_id);
+            if(isDeleted){
+                new Alert(Alert.AlertType.CONFIRMATION,"Service Delete Sucessfully").show();
+            }
+
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        }
 
     }
 

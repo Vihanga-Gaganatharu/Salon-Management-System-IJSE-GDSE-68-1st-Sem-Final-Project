@@ -87,15 +87,6 @@ public class EmployeeFormController {
                 }
         }
 
-        @FXML
-        void txtEmpAttndence(MouseEvent event) {
-
-        }
-
-        @FXML
-        void txtEmpSalary(MouseEvent event) {
-
-        }
 
         void ReportbtnOnActhion() throws SQLException, JRException {
                 InputStream resourceAsStream = getClass().getResourceAsStream("/Reports/saloonManagment.jrxml");
@@ -150,4 +141,9 @@ public class EmployeeFormController {
         }
 
 
+        public void btnAttendanceOnaction(ActionEvent actionEvent) {
+        }
+
+        public void BtnSalaryOnaction(ActionEvent actionEvent) {
+        }
 }

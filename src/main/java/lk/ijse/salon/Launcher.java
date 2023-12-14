@@ -11,11 +11,11 @@ public class Launcher extends Application{
     public static void main(String[] args) {
         launch(args);
     }
-
+@Override
     public void start(Stage stage) throws Exception{
-        Parent parent = FXMLLoader.load(this.getClass().getResource("/View/AppoinemntForm.fxml"));
+        Parent parent = FXMLLoader.load(this.getClass().getResource("/View/LoginPageForm.fxml"));
         Scene scene = new Scene(parent);
-       // stage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Mona Beauty Salon");
         stage.getIcons().add(new Image("/asstes/save.png"));
         stage.centerOnScreen();

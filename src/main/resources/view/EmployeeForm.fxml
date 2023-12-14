@@ -36,16 +36,6 @@
                   <TableColumn fx:id="colRank" prefWidth="294.0" text="Job Rank" />
                </columns>
             </TableView>
-            <Label layoutX="38.0" layoutY="139.0" onMouseClicked="#txtEmpAttndence" prefHeight="38.0" prefWidth="320.0" styleClass="font" text="Employee Attdendance" textFill="#ff00e9" underline="true">
-               <font>
-                  <Font size="27.0" />
-               </font>
-            </Label>
-            <Label layoutX="366.0" layoutY="139.0" onMouseClicked="#txtEmpSalary" prefHeight="38.0" prefWidth="320.0" styleClass="font" text="Employee Salary" textFill="#ff00e9" underline="true">
-               <font>
-                  <Font size="27.0" />
-               </font>
-            </Label>
             <ImageView fitHeight="274.0" fitWidth="281.0" layoutX="172.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../asstes/Ceo.png" />
@@ -56,7 +46,7 @@
                   <Image url="@../asstes/Team%20%201.png" />
                </image>
             </ImageView>
-            <Label layoutX="154.0" layoutY="514.0" prefHeight="54.0" prefWidth="345.0" text="Mr.Sadun">
+            <Label layoutX="174.0" layoutY="514.0" prefHeight="54.0" prefWidth="345.0" text="Mr.Sadun">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
@@ -66,7 +56,7 @@
                   <Font name="System Bold" size="33.0" />
                </font>
             </Label>
-            <Label layoutX="185.0" layoutY="543.0" prefHeight="54.0" prefWidth="240.0" text="Ceo Of Salon Mona" textFill="RED">
+            <Label layoutX="175.0" layoutY="543.0" prefHeight="54.0" prefWidth="240.0" text="Ceo Of Salon Mona" textFill="RED">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -76,23 +66,38 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button alignment="CENTER_RIGHT" layoutX="1234.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnReportsEmpOnAction" prefHeight="70.0" prefWidth="292.0" styleClass="btn" text="   Employee Reports">
+            <Button alignment="CENTER_RIGHT" layoutX="1206.0" layoutY="350.0" mnemonicParsing="false" onAction="#btnReportsEmpOnAction" prefHeight="58.0" prefWidth="320.0" styleClass="btn" text="   Employee Reports">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="54.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../asstes/icons8-edit-64.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <TextField fx:id="txtEmpIdSerarch" layoutX="1048.0" layoutY="115.0" prefHeight="55.0" prefWidth="488.0" promptText="Search EmpId To Report" styleClass="lablebtn">
+            <TextField fx:id="txtEmpIdSerarch" layoutX="1153.0" layoutY="272.0" prefHeight="55.0" prefWidth="363.0" promptText="Search EmpId To Report" styleClass="lablebtn">
                <font>
                   <Font size="25.0" />
                </font>
             </TextField>
+            <Button layoutX="802.0" layoutY="50.0" mnemonicParsing="false" onAction="#btnAttendanceOnaction" prefHeight="32.0" prefWidth="188.0" styleClass="btncrud" text="Employee Attendance" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="1022.0" layoutY="50.0" mnemonicParsing="false" onAction="#BtnSalaryOnaction" prefHeight="32.0" prefWidth="188.0" styleClass="btncrud" text="Employee Salary" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="1242.0" layoutY="50.0" mnemonicParsing="false" onAction="#btnManageEmpOnAction" prefHeight="32.0" prefWidth="188.0" styleClass="btncrud" text="Employee Manage" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>
