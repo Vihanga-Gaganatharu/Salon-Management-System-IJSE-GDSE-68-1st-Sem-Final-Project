@@ -3,6 +3,7 @@ package lk.ijse.salon.model;
 import javafx.collections.FXCollections;
 import lk.ijse.salon.db.DbConnection;
 import lk.ijse.salon.dto.ProductDto;
+import lk.ijse.salon.util.SQLUtil;
 import lombok.SneakyThrows;
 
 import java.sql.Connection;
@@ -30,14 +31,8 @@ public class ProductModel {
     }
 
     public ProductDto searchProduct(String id) throws SQLException {
-        Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "Select * from product where product_id = ?";
-        var pstm = connection.prepareStatement(sql);
-
-        pstm.setString(1, id);
-
-        ResultSet resultSet = pstm.executeQuery();
+        ResultSet resultSet = SQLUtil.execute("Select * from product where product_id = ?",id);
         ProductDto dto = null;
 
         if (resultSet.next()){
@@ -84,10 +79,7 @@ public class ProductModel {
 
     @SneakyThrows
     public List<ProductDto> getAllProduct() {
-        Connection connection = DbConnection.getInstance().getConnection();
-        String sql = "SELECT * FROM product";
-        PreparedStatement pstm = connection.prepareStatement(sql);
-        ResultSet resultSet = pstm.executeQuery();
+        ResultSet resultSet = SQLUtil.execute("SELECT * FROM product");
         List<ProductDto> dto = FXCollections.observableArrayList();
         while (resultSet.next()){
             dto.add(new ProductDto(

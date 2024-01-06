@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -29,7 +28,7 @@ public class LoginPageFormController {
     @FXML
     void btnLoginOnAction(ActionEvent event) throws IOException, SQLException {
         var EmployeeModel = new EmployeeModel();
-        boolean isOkey = EmployeeModel.addEmployee(username.getText(),password.getText());
+        boolean isOkey = EmployeeModel.SearchEmployee(username.getText(),password.getText());
 
         if(isOkey) {
             Parent root = FXMLLoader.load(this.getClass().getResource("/View/mainForm.fxml"));

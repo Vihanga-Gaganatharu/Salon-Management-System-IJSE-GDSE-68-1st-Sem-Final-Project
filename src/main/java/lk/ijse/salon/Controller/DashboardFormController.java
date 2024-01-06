@@ -46,7 +46,7 @@ public class DashboardFormController {
 
         }
         try {
-            int i = new CustomerModel().getAllCustomer();
+            int i = new CustomerModel().getCustomerCount();
             lblcustomercount.setText(String.valueOf(i));
         } catch (SQLException e) {
             System.out.printf("", e.getMessage());

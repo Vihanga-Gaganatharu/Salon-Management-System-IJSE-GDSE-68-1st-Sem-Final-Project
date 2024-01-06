@@ -3,9 +3,9 @@ package lk.ijse.salon.model;
 import lk.ijse.salon.db.DbConnection;
 import lk.ijse.salon.dto.CustomerDto;
 import lk.ijse.salon.dto.EmployeeDto;
+import lk.ijse.salon.util.SQLUtil;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -14,10 +14,8 @@ import java.util.List;
 public class CustomerModel {
 
     public static List<CustomerDto> loadAllCustomer() throws SQLException {
-        Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "select * from customers";
-        ResultSet resultSet = connection.prepareStatement(sql).executeQuery();
+        ResultSet resultSet = SQLUtil.execute("select * from customers");
 
         List<CustomerDto> cusList  = new ArrayList<>();
 
@@ -34,50 +32,9 @@ public class CustomerModel {
         return cusList;
     }
 
-    public static List<CustomerDto> search() throws SQLException {
-        Connection connection = DbConnection.getInstance().getConnection();
-        String sql = "select * from customers";
-        ResultSet resultSet = connection.prepareStatement(sql).executeQuery();
 
-        List<CustomerDto> cusList  = new ArrayList<>();
 
-        while (resultSet.next()){
-            cusList.add(new CustomerDto(
-                    resultSet.getString(1),
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    resultSet.getString(4),
-                    resultSet.getString(5),
-                    resultSet.getString(6)
-            ));
-        }
-        return cusList;
-
-    }
-
-    public static CustomerDto findCustomerById(String id) throws SQLException {
-        Connection connection = DbConnection.getInstance().getConnection();
-        String sql = "select * from customers where c_id=?";
-        PreparedStatement statement = connection.prepareStatement(sql);
-        statement.setObject(1,id);
-
-        ResultSet resultSet = statement.executeQuery();
-
-        CustomerDto customerDto=null;
-        if (resultSet.next()){
-             customerDto = new CustomerDto(
-                    resultSet.getString(1),
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    resultSet.getString(4),
-                    resultSet.getString(5),
-                    resultSet.getString(6)
-            );
-        }
-        return customerDto;
-    }
-
-    public CustomerDto searchCustomer(String id) throws SQLException {
+    public static CustomerDto searchCustomer(String id) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "Select * from customers where c_id = ?";
@@ -102,9 +59,9 @@ public class CustomerModel {
     }
 
 
-    public int getAllCustomer() throws SQLException {
-        Connection connection = DbConnection.getInstance().getConnection();
-        ResultSet resultSet = connection.prepareStatement("SELECT count(*) from customers").executeQuery();
+    public int getCustomerCount() throws SQLException {
+
+        ResultSet resultSet = SQLUtil.execute("SELECT count(*) from customers");
         int count = 0;
         while (resultSet.next()){
             count+=resultSet.getInt(1);
@@ -113,4 +70,18 @@ public class CustomerModel {
 
 
     }
+    public boolean deleteCustomer(String c_id) throws SQLException {
+        return SQLUtil.execute("delete from Customers where c_id = ?",c_id);
+    }
+
+    public boolean saveCustomer(CustomerDto dto) throws SQLException {
+        return SQLUtil.execute("insert into employee values (?,?,?,?,?,?,?,?,?)",dto.getC_id(),dto.getFirst_name(),dto.getNic(),dto.getAddress(),dto.getPhone_number(),dto.getGender());
+
+    }
+
+    public boolean updateCustomer(CustomerDto dto) throws SQLException {
+
+        return SQLUtil.execute("UPDATE customers SET c_id = ?, first_name = ?,nic = ?,address = ?,phone_number = ?,gender = ?, WHERE emp_id = ?",dto.getC_id(),dto.getFirst_name(),dto.getNic(),dto.getAddress(),dto.getPhone_number(),dto.getGender());
+    }
+
 }

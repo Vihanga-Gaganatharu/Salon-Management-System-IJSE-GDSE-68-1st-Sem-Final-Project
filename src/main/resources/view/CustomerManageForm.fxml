@@ -32,42 +32,42 @@
             <Font size="21.0" />
          </font>
       </TextField>
-      <TextField layoutX="425.0" layoutY="126.0" prefHeight="36.0" prefWidth="256.0" promptText="Customer Name" styleClass="textBox">
+      <TextField fx:id="txtCus_name" layoutX="425.0" layoutY="126.0" prefHeight="36.0" prefWidth="256.0" promptText="Customer Name" styleClass="textBox">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <TextField layoutX="65.0" layoutY="213.0" prefHeight="36.0" prefWidth="256.0" promptText="Last NaNic Noe" styleClass="textBox">
+      <TextField fx:id="txt_Nic" layoutX="65.0" layoutY="213.0" prefHeight="36.0" prefWidth="256.0" promptText=" Nic No" styleClass="textBox">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <TextField layoutX="425.0" layoutY="213.0" prefHeight="36.0" prefWidth="256.0" promptText="Address" styleClass="textBox">
+      <TextField fx:id="txt_address" layoutX="425.0" layoutY="213.0" prefHeight="36.0" prefWidth="256.0" promptText="Address" styleClass="textBox">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <Button alignment="CENTER_RIGHT" layoutX="54.0" layoutY="537.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Save" textFill="#0b8f33">
+      <Button alignment="CENTER_RIGHT" layoutX="54.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnSaveOn" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Save" textFill="#0b8f33">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER_RIGHT" layoutX="224.0" layoutY="537.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Update" textFill="#f59e11">
+      <Button alignment="CENTER_RIGHT" layoutX="224.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnUpdateOn" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Update" textFill="#f59e11">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER_RIGHT" layoutX="394.0" layoutY="537.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Delete" textFill="RED">
+      <Button alignment="CENTER_RIGHT" layoutX="394.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnDeleteOn" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Delete" textFill="RED">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER_RIGHT" layoutX="570.0" layoutY="537.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Clear" textFill="#727070">
+      <Button alignment="CENTER_RIGHT" layoutX="570.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnClearOn" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Clear" textFill="#727070">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER_RIGHT" layoutX="571.0" layoutY="27.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Search">
+      <Button alignment="CENTER_RIGHT" layoutX="571.0" layoutY="27.0" mnemonicParsing="false" onAction="#btnSearchOn" prefHeight="40.0" prefWidth="137.0" styleClass="btncrud" text="Search">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -97,12 +97,12 @@
             <Image url="@../asstes/Search%20Icon.png" />
          </image>
       </ImageView>
-      <TextField layoutX="65.0" layoutY="298.0" prefHeight="36.0" prefWidth="256.0" promptText="Phone No" styleClass="textBox">
+      <TextField fx:id="txt_Phone" layoutX="65.0" layoutY="298.0" prefHeight="36.0" prefWidth="256.0" promptText="Phone No" styleClass="textBox">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <ComboBox layoutX="430.0" layoutY="299.0" prefHeight="46.0" prefWidth="256.0" promptText="Gender">
+      <ComboBox fx:id="cmb_gender" layoutX="430.0" layoutY="299.0" prefHeight="46.0" prefWidth="256.0" promptText="Gender">
          <styleClass>
             <String fx:value="textBox" />
             <String fx:value="text-prompt" />

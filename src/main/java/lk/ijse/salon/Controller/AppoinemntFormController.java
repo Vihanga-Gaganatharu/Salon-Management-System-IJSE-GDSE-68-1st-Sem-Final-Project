@@ -116,7 +116,7 @@ public class AppoinemntFormController implements Initializable {
     void cmbCusIdOnAction(ActionEvent event) {
         String id = String.valueOf(cmdCusid.getValue());
         try {
-            CustomerDto dto = CustomerModel.findCustomerById(id);
+            CustomerDto dto = CustomerModel.searchCustomer(id);
             txtCustomerName.setText(dto.getFirst_name());
 
         } catch (SQLException e) {
