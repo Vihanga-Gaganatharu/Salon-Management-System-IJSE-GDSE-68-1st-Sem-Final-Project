@@ -49,33 +49,33 @@ public class CustomerManageFormController {
 
     }
 
-    @FXML
-    void btnSaveOn(ActionEvent event) {
-        String c_Id = txtCusId.getText();
-        String c_Name = txtCus_name.getText();
-        String c_Nic = txt_Nic.getText();
-        String c_Address = txt_Address.getText();
-        String c_Phone = txt_Phone.getText();
-        String gender = (String) cmb_gender.getValue();
-
-//        boolean isEmployeeValidate = validateEmployee();
-//        if (!isEmployeeValidate) {
-//            return;
+//    @FXML
+//    void btnSaveOn(ActionEvent event) {
+//        String c_Id = txtCusId.getText();
+//        String c_Name = txtCus_name.getText();
+//        String c_Nic = txt_Nic.getText();
+//        String c_Address = txt_Address.getText();
+//        String c_Phone = txt_Phone.getText();
+//        String gender = (String) cmb_gender.getValue();
+//
+////        boolean isEmployeeValidate = validateEmployee();
+////        if (!isEmployeeValidate) {
+////            return;
+////        }
+//
+//        var dto = new CustomerDto(c_Id,c_Name,c_Nic,c_Address,c_Phone,gender);
+//        var model = new CustomerModel();
+//
+//        try {
+//            boolean isSaved = model.(dto);
+//            if (isSaved) {
+//                new Alert(Alert.AlertType.CONFIRMATION, "Customer Added Succesfull").show();
+//            }
+//        } catch (SQLException e) {
+//            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
 //        }
-
-        var dto = new CustomerDto(c_Id,c_Name,c_Nic,c_Address,c_Phone,gender);
-        var model = new CustomerModel();
-
-        try {
-            boolean isSaved = model.(dto);
-            if (isSaved) {
-                new Alert(Alert.AlertType.CONFIRMATION, "Customer Added Succesfull").show();
-            }
-        } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
-        }
-
-    }
+//
+//    }
 
     @FXML
     void btnSearchOn(ActionEvent event) {

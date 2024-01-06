@@ -41,7 +41,7 @@ public class ProductManageFormController implements Initializable {
         try {
             boolean isSaved = model.saveProduct(dto);
             if (isSaved) {
-                new Alert(Alert.AlertType.CONFIRMATION, "Employee Added Succesfull").show();
+                new Alert(Alert.AlertType.CONFIRMATION, "Product Added Succesfull").show();
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();

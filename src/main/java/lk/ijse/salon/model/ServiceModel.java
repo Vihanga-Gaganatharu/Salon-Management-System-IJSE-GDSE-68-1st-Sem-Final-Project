@@ -2,6 +2,7 @@ package lk.ijse.salon.model;
 
 import lk.ijse.salon.db.DbConnection;
 import lk.ijse.salon.dto.ServiceDto;
+import lk.ijse.salon.util.SQLUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,10 +13,7 @@ import java.util.List;
 
 public class ServiceModel {
     public static List<ServiceDto> loadAllService() throws SQLException {
-        Connection connection = DbConnection.getInstance().getConnection();
-
-        String sql = "select * from service";
-        ResultSet resultSet = connection.prepareStatement(sql).executeQuery();
+        ResultSet resultSet = SQLUtil.execute("select * from service");
 
         List<ServiceDto> serviceList = new ArrayList<>();
 
@@ -32,10 +30,7 @@ public class ServiceModel {
     }
 
     public static List<ServiceDto> search () throws SQLException {
-        Connection connection = DbConnection.getInstance().getConnection();
-
-        String sql = "select * from service";
-        ResultSet resultSet = connection.prepareStatement(sql).executeQuery();
+        ResultSet resultSet = SQLUtil.execute( "select * from service");
 
         List<ServiceDto> serviceList = new ArrayList<>();
 
@@ -52,13 +47,8 @@ public class ServiceModel {
     }
 
     public static ServiceDto findServesById(String id) throws SQLException {
-        Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "select * from service where Service_Id=?";
-        PreparedStatement statement = connection.prepareStatement(sql);
-        statement.setObject(1,id);
-
-        ResultSet resultSet = statement.executeQuery();
+        ResultSet resultSet = SQLUtil.execute("select * from service where Service_Id=?",id);
 
         ServiceDto serviceDto =null;
         if (resultSet.next()){
